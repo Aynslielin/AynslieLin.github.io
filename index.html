@@ -1,0 +1,255 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <title>Aynslie Lin | Engineering Portfolio</title>
+
+  <style>
+    :root {
+      --bg: #fafaf8;
+      --text: #20252b;
+      --muted: #66717c;
+      --line: #e3e6e8;
+      --accent: #426d8b;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 1050px;
+      margin: auto;
+      padding: 0 24px;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 26px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 14px;
+    }
+
+    .hero {
+      padding: 110px 0 100px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 1.15;
+      letter-spacing: -2px;
+      max-width: 850px;
+      margin: 20px 0;
+    }
+
+    .intro {
+      color: var(--muted);
+      max-width: 650px;
+      font-size: 18px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 22px;
+      background: var(--text);
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 22px;
+    }
+
+    section { padding: 65px 0; }
+
+    h2 {
+      font-size: 30px;
+      letter-spacing: -1px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 30px;
+    }
+
+    .project {
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 30px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .project:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px #0000000d;
+    }
+
+    .project .number {
+      color: var(--accent);
+      font-size: 13px;
+    }
+
+    .project h3 {
+      font-size: 23px;
+      line-height: 1.3;
+    }
+
+    .project p { color: var(--muted); }
+
+    .tags {
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    footer {
+      padding: 35px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+      .projects { grid-template-columns: 1fr; }
+      .hero { padding: 70px 0; }
+      nav a { margin-left: 10px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <nav>
+      <strong>AYNSLIE LIN</strong>
+      <div>
+        <a href="#projects">Projects</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <header class="hero">
+      <div class="eyebrow">
+        Robotics · Embedded Systems · Mechatronics
+      </div>
+
+      <h1>Engineering physical systems,
+          from concept to prototype.</h1>
+
+      <p class="intro">
+        Hi, I'm Aynslie, an Electrical and Computer
+        Engineering master's student at the
+        University of Washington.
+        I'm interested in robotics hardware,
+        motion control, and system integration.
+      </p>
+
+      <a class="button" href="#projects">
+        Explore My Work
+      </a>
+    </header>
+
+    <section id="projects">
+      <div class="eyebrow">Selected Work</div>
+      <h2>Engineering Projects</h2>
+
+      <div class="projects">
+        <article class="project">
+          <div class="number">PROJECT 01</div>
+          <h3>Autonomous Dining Service Robot</h3>
+          <p>
+            A mobile robotics project combining
+            mechanical design, computer vision,
+            and visual-feedback motion control.
+          </p>
+          <div class="tags">
+            SolidWorks · Python · OpenCV · YOLOv8
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="number">PROJECT 02</div>
+          <h3>Intelligent CNC Plotter</h3>
+          <p>
+            Redesigned a two-piece lead-screw support
+            and integrated stepper motors with an
+            Arduino-based GRBL control system.
+          </p>
+          <div class="tags">
+            SolidWorks · Arduino · GRBL
+          </div>
+        </article>
+
+        <article class="project">
+          <div class="number">PROJECT 03</div>
+          <h3>Omnidirectional Mobile Robot</h3>
+          <p>
+            Developed smartphone-controlled
+            omnidirectional motion using an
+            Arduino Mega and Mecanum wheels.
+          </p>
+          <div class="tags">
+            Arduino · UART · PWM
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="eyebrow">About Me</div>
+      <h2>Building and learning.</h2>
+      <p class="intro">
+        My interests lie at the intersection of
+        mechanical design, embedded electronics,
+        and robotics systems.
+        I enjoy exploring how different engineering
+        disciplines come together in physical prototypes.
+      </p>
+    </section>
+
+    <section id="contact">
+      <div class="eyebrow">Get in Touch</div>
+      <h2>Let's connect.</h2>
+      <p>
+        <a href="https://github.com/Aynslielin">GitHub</a>
+        ·
+        <a href="https://linkedin.com/in/hsin-wei-lin">
+          LinkedIn
+        </a>
+      </p>
+    </section>
+
+    <footer>
+      © 2026 Aynslie Lin · Built with GitHub Pages
+    </footer>
+  </div>
+</body>
+</html>
